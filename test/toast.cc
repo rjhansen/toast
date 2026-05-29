@@ -7,7 +7,6 @@
 #include <vector>
 
 using std::array;
-using std::default_random_engine;
 using std::string;
 using std::vector;
 using std::ranges::shuffle;
@@ -15,10 +14,6 @@ using std::ranges::fill;
 using std::ranges::fill_n;
 
 using namespace engineering::hansen::toast;
-
-namespace {
-auto rng = std::random_device{};
-} // namespace
 
 TEST(QuickSort, vector_ints) {
   vector unsorted_int{4, 3, 2, 1};
