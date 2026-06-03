@@ -9,11 +9,15 @@
 using std::array;
 using std::string;
 using std::vector;
-using std::ranges::shuffle;
 using std::ranges::fill;
 using std::ranges::fill_n;
+using std::ranges::shuffle;
 
 using namespace engineering::hansen::toast;
+
+namespace {
+static std::mt19937 rng = std::mt19937{std::random_device{}()};
+}
 
 TEST(QuickSort, vector_ints) {
   vector unsorted_int{4, 3, 2, 1};
